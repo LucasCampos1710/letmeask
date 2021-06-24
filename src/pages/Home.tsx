@@ -38,6 +38,11 @@ export function Home() {
         return;
       }
 
+      if (roomRef.exists()) {
+        alert('Room already closed.');
+        return;
+      }
+
       history.push(`/rooms/${roomCode}`)
     }
     
